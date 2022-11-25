@@ -11,5 +11,4 @@ async function parseQuotations(){
     writeFileSync('assets/quotations.txt', Array.from(buff).join('\n'))
 }
 
-
 parseQuotations()
