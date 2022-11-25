@@ -2,9 +2,10 @@
   "name": "quotatitonbot",
   "version": "1.0.0",
   "description": "Бот для случайного выбора фраз.",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "keywords": [
     "quotatiton",
@@ -17,6 +18,11 @@
   "license": "MIT",
   "dependencies": {
     "axios": "^1.2.0",
-    "cheerio": "^1.0.0-rc.12"
-  }
+    "cheerio": "^1.0.0-rc.12",
+    "jest": "^29.3.1",
+    "telegraf": "^4.11.2"
+  },
+  "bundleDependencies": [
+    "telegraf"
+  ]
 }
