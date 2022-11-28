@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 
-export default function (context){
+export default function (){
     const text = readFileSync('./assets/start.md')
-    context.replyWithMarkdown(text + '')
+    return text + " "
 }
