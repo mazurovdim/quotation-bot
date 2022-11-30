@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
 
 export default function (){
-    const text = readFileSync('./assets/start.md')
-    return text + " "
+    const text = readFileSync('./assets/start.md','utf-8')
+    return text + ''
 }

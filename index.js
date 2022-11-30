@@ -7,9 +7,8 @@ const env = dotenv.config().parsed
 const botToken = env.TELEGRAM_BOT_TOKEN
 const bot = new Telegraf(botToken);
 
-    bot.start(async (context) => {
-    await context.replyWithMarkdownV2(start())
-    bot.telegram.sendMessage(context.chat.id, 'Найти филосовскую фразу?', 
+bot.start(async (context) => {
+    bot.telegram.sendMessage(context.chat.id,{text: 'ffd'},{parse_mode: 'MarkdownV2'},
     {
         reply_markup:{
            keyboard:[
@@ -18,7 +17,8 @@ const bot = new Telegraf(botToken);
                 ]
             ],
             resize_keyboard:true
-        }
+        },
+        
     })
 });
 
