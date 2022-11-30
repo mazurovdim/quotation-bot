@@ -1,6 +1,6 @@
 import { readFileSync } from 'fs'
+import Markup from 'telegraf'
 
-export default function (){
-    const text = readFileSync('./assets/start.md','utf-8')
-    return text + ''
+export default (ctx) => {
+    
 }
