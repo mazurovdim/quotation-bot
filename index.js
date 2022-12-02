@@ -1,8 +1,7 @@
-import { Telegraf, Markup } from "telegraf";
+import { Telegraf } from "telegraf";
 import dotenv from 'dotenv'
 import help from "./modules/help.js";
 import start from "./modules/start.js";
-import { readFileSync } from 'fs'
 import randomPhrase from './modules/random-phrase.js'
 
 const env = dotenv.config().parsed
