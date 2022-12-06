@@ -1,13 +1,8 @@
 import { readFileSync } from 'fs'
-import { Composer, Markup } from 'telegraf'
-const composer = new Composer()
-
-// export default composer.start(context => {
-//     const text = readFileSync('assets/start.md','utf8')
-//     context.replyWithMarkdownV2(text, Markup.keyboard(['Сгенерировать фразу']).resize())
-// });
+import { Markup } from 'telegraf'
+import  Emoji from "node-emoji";
 
 export default (context) => {
      const text = readFileSync('assets/start.md','utf8')
-     context.replyWithMarkdownV2(text, Markup.keyboard(['Сгенерировать фразу']).resize())
+     context.replyWithMarkdownV2(Emoji.emojify(text), Markup.keyboard(['Выбрать фразу']).resize())
 };
