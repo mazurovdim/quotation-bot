@@ -22,14 +22,11 @@ bot.hears(/[А-Яа-яЁё]+/, getFiltered)
 bot.hears(/[A-Za-z0-9\W]+/, (ctx)=> ctx.reply(Emoji.emojify(':point_up_2: Братуха, на пендосском не понимаем!')))
 bot.action('like',async (ctx) => {
     await ctx.answerCbQuery()
-    let count = parseInt(ctx.callbackQuery.message.reply_markup.inline_keyboard[0][0].text) 
     await ctx.editMessageReplyMarkup(
             {
-                inline_keyboard: [[Markup.button.callback(`${++count}`,'like')]]
+                inline_keyboard: [[Markup.button.callback(`${Emoji.emojify(':heart:')} ${ctx.addLike(ctx.callbackQuery.message.text)}`,'like')]]
             }
         )
-    console.log(ctx.callbackQuery.message.reply_markup.inline_keyboard[0][0].text)
-    console.log(ctx.hello)
 })
 
 bot.launch();
