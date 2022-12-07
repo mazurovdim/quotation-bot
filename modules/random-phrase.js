@@ -1,7 +1,12 @@
 import { readFileSync } from 'fs'
 import  Emoji from "node-emoji";
 import { Markup } from 'telegraf';
+const likes = new Map()
 const phaseArray = readFileSync('assets/quotations.txt','utf-8').split('\n')
+
+export function addLike(phrase){
+    return 0
+}
 
 function getRandomPhrase(arr = phaseArray){
     const rn = Math.floor(Math.random() * arr.length)
